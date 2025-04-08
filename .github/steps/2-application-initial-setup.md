@@ -1,89 +1,89 @@
-## Step 2: The initial application setup: Directory structure, Python requirements, and MongoDB
+## Passo 2: Configuração inicial da aplicação: Estrutura de diretórios, requisitos do Python e MongoDB
 
-In this step, we will accomplish the following:
+Neste passo, vamos realizar as seguintes tarefas:
 
-- Create the octofit-tracker application directory structure.
-- Create the octofit-tracker/backend and octofit-tracker/frontend directories.
-- Create the octofit-tracker/backend/requirements.txt file.
+- Criar a estrutura de diretórios da aplicação octofit-tracker.
+- Criar os diretórios octofit-tracker/backend e octofit-tracker/frontend.
+- Criar o arquivo octofit-tracker/backend/requirements.txt.
 
-1. Open all files in the `docs` folder and keep this file open in the editor throughout this exercise.
-    1.  agent mode uses `mona-high-school-fitness-tracker.md` and `octofit_story.md` as a reference to create the application
-2. Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
+1. Abra todos os arquivos na pasta `docs` e mantenha este arquivo aberto no editor durante todo o exercício.
+    1. O modo agente usa `mona-high-school-fitness-tracker.md` e `octofit_story.md` como referência para criar a aplicação.
+2. Copie e cole os seguintes prompts no chat do GitHub Copilot e selecione "Agente" em vez de "Perguntar" ou "Editar" no menu suspenso onde você está inserindo o prompt.
 
 <img src="https://github.com/user-attachments/assets/e172f5c0-bc2a-45a9-a301-9af8bfbd6a2e" width=40% height=40%>
 
-> 🪧 **Note:** 
-- Do not change the model from GPT-4o this will be an optional activity at the end of the course.
-- Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
-- Wait a moment for the Copilot to respond and press the continue button to execute commands presented by Copilot agent mode.
-- Keep files created and updated by Copilot agent mode until it is finished.
-- Agent mode has the ability to evaluate your code base and execute commands and add/refactor/delete parts of your code base and automatically self heal if it or you makes a mistake in the process.
+> 🪧 **Nota:** 
+- Não altere o modelo de GPT-4, isso será uma atividade opcional no final do curso.
+- Lembre-se de que o modo agente do Copilot é conversacional, então ele pode fazer perguntas e você pode fazer perguntas também.
+- Aguarde um momento para o Copilot responder e pressione o botão continuar para executar os comandos apresentados pelo modo agente do Copilot.
+- Mantenha os arquivos criados e atualizados pelo modo agente do Copilot até que ele termine.
+- O modo agente tem a capacidade de avaliar sua base de código, executar comandos e adicionar/refatorar/excluir partes do seu código e se auto corrigir automaticamente se ele ou você cometer um erro no processo.
 
-### :keyboard: Activity: Prompt for GitHub Copilot in agent mode to start the creation of our application
+### :keyboard: Atividade: Prompt para o GitHub Copilot no modo agente para iniciar a criação da nossa aplicação
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Let's take the following step by step and generate instructions in this order and execute the commands.
-> Use docs/mona-high-school-fitness-tracker.md as a guide for the project structure and requirements.
+> Vamos seguir os seguintes passos e gerar instruções nesta ordem e executar os comandos.
+> Use docs/mona-high-school-fitness-tracker.md como guia para a estrutura do projeto e requisitos.
 >
-> 1. Understand the story of creating the fitness application from the docs/octofit_story.md file.
-> 2. Create the initial directory structure for the octofit-tracker application octofit-tracker/backend, octofit-tracker/frontend.
-> 3. Setup the backend python virtual environment, octofit-tracker/backend/requirements.txt based on docs/mona-high-school-fitness-tracker.md, and install required packages.
+> 1. Entenda a história da criação do aplicativo de fitness a partir do arquivo docs/octofit_story.md.
+> 2. Crie a estrutura inicial de diretórios para a aplicação octofit-tracker: octofit-tracker/backend, octofit-tracker/frontend.
+> 3. Configure o ambiente virtual Python no backend, crie o arquivo octofit-tracker/backend/requirements.txt com base no docs/mona-high-school-fitness-tracker.md e instale os pacotes necessários.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 >
 
-> ❕ **Important:** Once the above activity installs all the required packages, proceed to the next activity.
+> ❕ **Importante:** Uma vez que a atividade acima instalar todos os pacotes necessários, prossiga para a próxima atividade.
 
-### :keyboard: Activity: Let's start and verify mongoDB is running
+### :keyboard: Atividade: Vamos iniciar e verificar se o MongoDB está em execução
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. > Let's start and verify mongoDB is running.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md, use octofit como o nome do aplicativo das escolas de mergington. Vamos iniciar e verificar se o MongoDB está em execução.
 >
-> 1. Start the mongoDB service.
-> 2. Verify the mongoDB service running.
+> 1. Inicie o serviço MongoDB.
+> 2. Verifique se o serviço MongoDB está em execução.
 > 
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-> ❕ **Important:**
-- If the command completes in the terminal but agent mode shows it is still running click stop.
-- You may need to paste the prompt again in agent mode.
+> ❕ **Importante:**
+- Se o comando for concluído no terminal, mas o modo agente mostrar que ainda está em execução, clique em parar.
+- Você pode precisar colar o prompt novamente no modo agente.
 
-### :keyboard: Activity: Let's start and verify MongoDB is running
+### :keyboard: Atividade: Vamos iniciar e verificar se o MongoDB está em execução
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. > Let's start and verify MongoDB is running.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md, use octofit como o nome do aplicativo das escolas de mergington. Vamos iniciar e verificar se o MongoDB está em execução.
 >
-> 1. Start the MongoDB service.
-> 2. Verify the MongoDB service running.
+> 1. Inicie o serviço MongoDB.
+> 2. Verifique se o serviço MongoDB está em execução.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-> ❕ **Important:**
-- If the command completes in the terminal but agent mode shows it is still running click stop.
-- You may need to paste the prompt again in agent mode.
+> ❕ **Importante:**
+- Se o comando for concluído no terminal, mas o modo agente mostrar que ainda está em execução, clique em parar.
+- Você pode precisar colar o prompt novamente no modo agente.
 
-1. Now that we have created the app directory structure, setup a Python virtual environment, and Copilot agent mode helped write a requirements.txt to install all project dependencies let's check our changes in to our `build-octofit-app` branch.
+1. Agora que criamos a estrutura de diretórios do aplicativo, configuramos um ambiente virtual Python e o modo agente do Copilot ajudou a escrever um requirements.txt para instalar todas as dependências do projeto, vamos verificar nossas mudanças na branch `build-octofit-app`.
 
-1. With our new changes complete, please **commit** and **push** the changes to GitHub.
+1. Com nossas novas mudanças concluídas, por favor, **commit** e **push** as mudanças para o GitHub.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson so we can keep working!
+1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição para continuarmos trabalhando!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Tendo problemas? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Se você não receber feedback, aqui estão algumas coisas para verificar:
 
-- Make sure your commit changes were made for the following file to the branch `build-octofit-app` and pushed/synchronized to GitHub:
-  - `octofit-tracker/backend/requirements.txt` and it contains the package `Django==4.1`
-- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
+- Certifique-se de que suas mudanças de commit foram feitas para o seguinte arquivo na branch `build-octofit-app` e enviadas/sincronizadas para o GitHub:
+  - `octofit-tracker/backend/requirements.txt` e ele contém o pacote `Django==4.1`
+- Se Mona encontrou um erro, basta fazer uma correção e enviar suas mudanças novamente. Mona verificará seu trabalho quantas vezes forem necessárias.
 
 </details>
