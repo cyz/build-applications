@@ -1,43 +1,43 @@
-## Step 6: Using GitHub Copilot within a pull request
+## Passo 6: Usando o GitHub Copilot em uma pull request
 
-Congratulations! You are finished with coding for this exercise (and VS Code). Now it's time to merge our work. :tada: To wrap up, let's learn about two limited-access Copilot features that can speed up our pull requests!
+Parabéns! Você terminou de codificar para este exercício (e VS Code). Agora é hora de mesclar nosso trabalho. :tada: Para finalizar, vamos aprender sobre dois recursos de acesso limitado do Copilot que podem acelerar nossas pull requests!
 
-#### Copilot Pull Request Summaries
+#### Resumos de Pull Request do Copilot
 
-Typically, you would review your notes and commit messages then summarize them for your pull request description. This may take some time, especially if commit messages are inconsistent or code is not documented well. Fortunately, Copilot can consider all changes in the pull request and provide the important highlights, and with references too!
+Normalmente, você revisaria suas anotações e mensagens de commit e, em seguida, as resumiria para a descrição da sua pull request. Isso pode levar algum tempo, especialmente se as mensagens de commit forem inconsistentes ou o código não estiver bem documentado. Felizmente, o Copilot pode considerar todas as mudanças na pull request e fornecer os destaques importantes, e com referências também!
 
-> [!NOTE]  
-> This is unavailable with the **Copilot Free** tier. [[docs]](https://docs.github.com/en/enterprise-cloud@latest/copilot/using-github-copilot/using-github-copilot-for-pull-requests/creating-a-pull-request-summary-with-github-copilot)
+> [!NOTA]  
+> Isso não está disponível no nível **Copilot Free**. https://docs.github.com/en/enterprise-cloud@latest/copilot/using-github-copilot/using-github-copilot-for-pull-requests/creating-a-pull-request-summary-with-github-copilot
 
-#### Copilot Review
+#### Revisão do Copilot
 
-More eyes on our work is always useful so let's ask Copilot to do a first pass before we do a normal peer review process. Copilot is great at catching common mistakes that can be fixed by simple adjustment, but please remember to use it responsibly.
+Mais olhos em nosso trabalho são sempre úteis, então vamos pedir ao Copilot para fazer uma primeira revisão antes de fazermos um processo normal de revisão por pares. O Copilot é ótimo para detectar erros comuns que podem ser corrigidos com ajustes simples, mas lembre-se de usá-lo de forma responsável.
 
-> [!NOTE]  
-> This is in **Public Preview** for organizations. [[docs]](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
+> [!NOTA]  
+> Isso está em **Pré-visualização Pública** para organizações. https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review
 
-### :keyboard: Activity: Summarize and review a PR with Copilot
+### :keyboard: Atividade: Resumir e revisar uma PR com o Copilot
 
-Both **pull request summaries** and **copilot review** have limited access, so this activity is mostly optional. If you have access, Mona will gladly check your work though! If not, you can skip the optional steps.
+Tanto os **resumos de pull request** quanto a **revisão do copilot** têm acesso limitado, então esta atividade é principalmente opcional. Se você tiver acesso, Mona ficará feliz em verificar seu trabalho! Caso contrário, você pode pular as etapas opcionais.
 
-1. In a web browser, open another tab and navigate to your exercise repository.
+1. Em um navegador da web, abra outra aba e navegue até o repositório do seu exercício.
 
-1. You might notice a **notification banner** suggesting to create a new pull request. Click that or use the **Pull Requests** tab at the top to create a new pull request. Please use the following details:
+1. Você pode notar um **banner de notificação** sugerindo criar uma nova pull request. Clique nele ou use a aba **Pull Requests** no topo para criar uma nova pull request. Por favor, use os seguintes detalhes:
 
    - **base:** `main`
    - **compare:** `build-octofit-app`
-   - **title:** `Add registration validation and more activities`
+   - **title:** `Adicionar validação de registro e mais atividades`
 
-1. (Optional) In the **Add a description** area, enter edit mode if needed, then click the **Copilot actions** icon and **Summary** action. After a moment, Copilot will add a description. :memo:
+1. (Opcional) Na área **Adicionar uma descrição**, entre no modo de edição se necessário, depois clique no ícone **Ações do Copilot** e na ação **Resumo**. Após um momento, o Copilot adicionará uma descrição. :memo:
 
-   <img alt="Copilot summarize button " width="300px" src="https://github.com/user-attachments/assets/3fc5fab4-db03-4ab8-8a16-cdd71ec2ded0">
+   <img alt="Botão de resumo do Copilot" width="300px" src="https://github.com/user-attachments/assets/3fc5fab4-db03-4ab8-8a16-cdd71ec2ded0">
 
-1. (Optional) In the right side information panel at the top, locate the **Reviewers** section and click the **Request** button next to a **Copilot icon**. Wait a moment for Copilot to add a review comment to your pull request!
+1. (Opcional) No painel de informações à direita no topo, localize a seção **Revisores** e clique no botão **Solicitar** ao lado de um ícone do **Copilot**. Aguarde um momento para o Copilot adicionar um comentário de revisão à sua pull request!
 
-   <img alt="Copilot review button" width="300px" src="https://github.com/user-attachments/assets/39b15002-a235-4c25-b09d-6a8097e27b62">
+   <img alt="Botão de revisão do Copilot" width="300px" src="https://github.com/user-attachments/assets/39b15002-a235-4c25-b09d-6a8097e27b62">
 
-   > **Tip:** Notice a log entry that Copilot was requested for a review.
+   > **Dica:** Observe uma entrada de log que o Copilot foi solicitado para uma revisão.
 
-1. At the bottom, press the **Merge pull request** button. Nice work! You are all done! :tada:
+1. Na parte inferior, pressione o botão **Merge pull request**. Bom trabalho! Você terminou! :tada:
 
-1. Wait a moment for Mona to check your work, provide feedback, and post a final review of this lesson!
+1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e postar uma revisão final desta lição!
