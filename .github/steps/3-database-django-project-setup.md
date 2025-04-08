@@ -1,124 +1,124 @@
-## Step 3: Initialize and create the octofit_db MongoDB database, Django project/app, update Django project/app files, and populate the MongoDB database
+## Passo 3: Inicializar e criar o banco de dados octofit_db MongoDB, projeto/aplicativo Django, atualizar arquivos do projeto/aplicativo Django e popular o banco de dados MongoDB
 
-In this step, we will accomplish the following:
+Neste passo, vamos realizar as seguintes tarefas:
 
-- Set up the octofit_db MongoDB database structure.
-- Update the octofit-tracker/backend/octofit_tracker app files:
-  - settings, models, serializers, urls, views, tests, and admin files.
-- Populate the octofit_db database with test data.
-- Verify the test data is populated in the octofit_db database.
+- Configurar a estrutura do banco de dados octofit_db MongoDB.
+- Atualizar os arquivos do aplicativo octofit-tracker/backend/octofit_tracker:
+  - settings, models, serializers, urls, views, tests e admin.
+- Popular o banco de dados octofit_db com dados de teste.
+- Verificar se os dados de teste foram populados no banco de dados octofit_db.
 
-1. Open all files in the `docs` folder and keep this file open in the editor throughout this exercise.
-    1.  agent mode uses `mona-high-school-fitness-tracker.md` and `octofit_story.md` as a reference to create the application
-2. Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
+1. Abra todos os arquivos na pasta `docs` e mantenha este arquivo aberto no editor durante todo o exercício.
+    1. O modo agente usa `mona-high-school-fitness-tracker.md` e `octofit_story.md` como referência para criar a aplicação.
+2. Copie e cole os seguintes prompts no chat do GitHub Copilot e selecione "Agente" em vez de "Perguntar" ou "Editar" no menu suspenso onde você está inserindo o prompt.
 
-> 🪧 **Note:** 
-- Do not change the model from GPT-4o this will be an optional activity at the end of the course.
-- Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
-- Wait a moment for the Copilot to respond and press the continue button to execute commands presented by Copilot agent mode.
-- Keep files created and updated by Copilot agent mode until it is finished.
-- Agent mode has the ability to evaluate your code base and execute commands and add/refactor/delete parts of your code base and automatically self heal if it or you makes a mistake in the process.
+> 🪧 **Nota:** 
+- Não altere o modelo de GPT-4, isso será uma atividade opcional no final do curso.
+- Lembre-se de que o modo agente do Copilot é conversacional, então ele pode fazer perguntas e você pode fazer perguntas também.
+- Aguarde um momento para o Copilot responder e pressione o botão continuar para executar os comandos apresentados pelo modo agente do Copilot.
+- Mantenha os arquivos criados e atualizados pelo modo agente do Copilot até que ele termine.
+- O modo agente tem a capacidade de avaliar sua base de código, executar comandos e adicionar/refatorar/excluir partes do seu código e se auto corrigir automaticamente se ele ou você cometer um erro no processo.
 
-### :keyboard: Activity: Setup the Python Django project/app
+### :keyboard: Atividade: Configurar o projeto/aplicativo Python Django
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app,  > let's setup the Python Django project/app and run the server.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington, vamos configurar o projeto/aplicativo Python Django e executar o servidor.
 >
-> 1. The octofit-tracker/backend directory will store the django project and app with the name octofit-tracker.
-> 2. Setup the additional configuration for the django project/app with the name octofit-tracker.
+> 1. O diretório octofit-tracker/backend armazenará o projeto e aplicativo django com o nome octofit-tracker.
+> 2. Configure a configuração adicional para o projeto/aplicativo django com o nome octofit-tracker.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-> 🪧 **Note:** 
-- Wait a moment for the Copilot to respond and press the continue button to execute each command presented by Copilot agent mode.
-- Keep files created and updated until the Copilot agent mode has finished.
+> 🪧 **Nota:** 
+- Aguarde um momento para o Copilot responder e pressione o botão continuar para executar cada comando apresentado pelo modo agente do Copilot.
+- Mantenha os arquivos criados e atualizados até que o modo agente do Copilot tenha terminado.
 
-> ❕ **Important:** Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel**.
+> ❕ **Importante:** Não inicie o aplicativo Python Django da maneira que o modo agente do GitHub Copilot sugere, clique em **cancelar**.
 
-### :keyboard: Activity: Initialize and create the octofit_db MongoDB database
+### :keyboard: Atividade: Inicializar e criar o banco de dados octofit_db MongoDB
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for Merington's high school's app. Let's initialize the octofit_db database.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo da escola de Merington. Vamos inicializar o banco de dados octofit_db.
 >
-> 1. Initialize the mongo octofit_db database.
-> 2. Create a correct table structure for users, teams, activity, leaderboard, and workouts collections.
-> 3. Make sure there is a unique ID for the primary key for the user collection.
+> 1. Inicialize o banco de dados mongo octofit_db.
+> 2. Crie uma estrutura de tabela correta para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 3. Certifique-se de que há um ID único para a chave primária na coleção de usuários.
 >   ex. db.users.createIndex({ "email": 1 }, { unique: true })
-> 4. Execute the command for me to create the database.
-> 5. List the collections in the octofit_db database.
+> 4. Execute o comando para mim para criar o banco de dados.
+> 5. Liste as coleções no banco de dados octofit_db.
 > 
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 > ```
 
-> ❕ **Important:**
-- If there is no "Continue" button, just pull the left side of the GitHub Copilot Chat panel over to the left, and it should appear.
-- If this doesn't work, you may need to copy and paste the response in the terminal if there is no "Continue" button.
+> ❕ **Importante:**
+- Se não houver botão "Continuar", basta puxar o lado esquerdo do painel de chat do GitHub Copilot para a esquerda, e ele deve aparecer.
+- Se isso não funcionar, você pode precisar copiar e colar a resposta no terminal se não houver botão "Continuar".
 
-### :keyboard: Activity: Update the Python Django project/app files
+### :keyboard: Atividade: Atualizar os arquivos do projeto/aplicativo Python Django
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for Merington's high school's app. Let's update the octofit-tracker/backend/octofit_tracker app files.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo da escola de Merington. Vamos atualizar os arquivos do aplicativo octofit-tracker/backend/octofit_tracker.
 >
-> 1. Update the octofit-tracker/backend/octofit_tracker/settings.py file to include the MongoDB database connection.
-> 2. Update the octofit-tracker/backend/octofit_tracker/models.py file to include the models for users, teams, activity, leaderboard, and workouts collections.
-> 3. Update the octofit-tracker/backend/octofit_tracker/serializers.py file to include the serializers for users, teams, activity, leaderboard, and workouts collections.
-> 4. Update the octofit-tracker/backend/octofit_tracker/urls.py file to include the URLs for users, teams, activity, leaderboard, and workouts collections.
-> 5. Update the octofit-tracker/backend/octofit_tracker/views.py file to include the views for users, teams, activity, leaderboard, and workouts collections.
-> 6. Update the octofit-tracker/backend/octofit_tracker/tests.py file to include the tests for users, teams, activity, leaderboard, and workouts collections.
-> 7. Update the octofit-tracker/backend/octofit_tracker/admin.py file to include the admin for users, teams, activity, leaderboard, and workouts collections.
-> 8. Make sure api_root is in octofit-tracker/backend/octofit_tracker/urls.py
-> 9. Enable CORS in the octofit-tracker/backend/octofit_tracker/settings.py file to allow cross-origin requests from the frontend React app and allow all origins, methods, and headers.
-> 10. Allow all hosts in the settings.py file.
-> 11. Install CORS middleware components.
+> 1. Atualize o arquivo octofit-tracker/backend/octofit_tracker/settings.py para incluir a conexão com o banco de dados MongoDB.
+> 2. Atualize o arquivo octofit-tracker/backend/octofit_tracker/models.py para incluir os modelos para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 3. Atualize o arquivo octofit-tracker/backend/octofit_tracker/serializers.py para incluir os serializers para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 4. Atualize o arquivo octofit-tracker/backend/octofit_tracker/urls.py para incluir as URLs para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 5. Atualize o arquivo octofit-tracker/backend/octofit_tracker/views.py para incluir as views para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 6. Atualize o arquivo octofit-tracker/backend/octofit_tracker/tests.py para incluir os testes para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 7. Atualize o arquivo octofit-tracker/backend/octofit_tracker/admin.py para incluir o admin para as coleções de usuários, equipes, atividades, leaderboard e treinos.
+> 8. Certifique-se de que api_root está em octofit-tracker/backend/octofit_tracker/urls.py.
+> 9. Habilite CORS no arquivo octofit-tracker/backend/octofit_tracker/settings.py para permitir solicitações de origem cruzada do aplicativo frontend React e permitir todas as origens, métodos e cabeçalhos.
+> 10. Permita todos os hosts no arquivo settings.py.
+> 11. Instale os componentes do middleware CORS.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 > ```
 
-> ❕ **Important:** Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel**.
+> ❕ **Importante:** Não inicie o aplicativo Python Django da maneira que o modo agente do GitHub Copilot sugere, clique em **cancelar**.
 
-### :keyboard: Activity: Populate the octofit_db database with test data from Django project/app files
+### :keyboard: Atividade: Popular o banco de dados octofit_db com dados de teste dos arquivos do projeto/aplicativo Django
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. > Let's populate the octofit_db database with test data. Use same data from docs/mona-high-school-fitness-tracker.md file.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington. Vamos popular o banco de dados octofit_db com dados de teste. Use os mesmos dados do arquivo docs/mona-high-school-fitness-tracker.md.
 > 
-> 1. Create a test data file in the octofit-tracker/backend/octofit_tracker directory.
-> 2. Make sure the Python Django server is running in the Python virtual environment makemigrations and migrate the database.
-> 3. Populate the octofit_db database with test data for users, teams, activities, leaderboard, and workouts collections based on test data in docs/mona-high-school-fitness-tracker.md populate_db.py.
-> 4. Verify the test data is populated in the octofit_db database.
+> 1. Crie um arquivo de dados de teste no diretório octofit-tracker/backend/octofit_tracker.
+> 2. Certifique-se de que o servidor Python Django está em execução no ambiente virtual Python, faça as migrações e migre o banco de dados.
+> 3. Popule o banco de dados octofit_db com dados de teste para as coleções de usuários, equipes, atividades, leaderboard e treinos com base nos dados de teste no arquivo docs/mona-high-school-fitness-tracker.md populate_db.py.
+> 4. Verifique se os dados de teste foram populados no banco de dados octofit_db.
 > 
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 > ```
 
-Don't proceed with the next activity until all of these steps are completed.
+Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 
-> ❕ **Important:**
-- Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel**.
-- If there is no "Continue" button, just pull the left side of the GitHub Copilot Chat panel over to the left, and it should appear.
-- If this doesn't work, you may need to copy and paste the response in the terminal if there is no "Continue" button.
+> ❕ **Importante:**
+- Não inicie o aplicativo Python Django da maneira que o modo agente do GitHub Copilot sugere, clique em **cancelar**.
+- Se não houver botão "Continuar", basta puxar o lado esquerdo do painel de chat do GitHub Copilot para a esquerda, e ele deve aparecer.
+- Se isso não funcionar, você pode precisar copiar e colar a resposta no terminal se não houver botão "Continuar".
 
-1. Now that we have created the database structure, updated our Django project files, and populated the database, let's check our changes into our `build-octofit-app` branch.
+1. Agora que criamos a estrutura do banco de dados, atualizamos nossos arquivos do projeto Django e populamos o banco de dados, vamos verificar nossas mudanças na branch `build-octofit-app`.
 
-1. With our new changes complete, please **commit** and **push** the changes to GitHub.
+1. Com nossas novas mudanças concluídas, por favor, **commit** e **push** as mudanças para o GitHub.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson so we can keep working!
+1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição para continuarmos trabalhando!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Tendo problemas? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Se você não receber feedback, aqui estão algumas coisas para verificar:
 
-- Make sure your commit changes were made for the following files to the branch `build-octofit-app` and pushed/synchronized to GitHub:
+- Certifique-se de que suas mudanças de commit foram feitas para os seguintes arquivos na branch `build-octofit-app` e enviadas/sincronizadas para o GitHub:
   - `octofit-tracker/backend/octofit_tracker/settings.py`
   - `octofit-tracker/backend/octofit_tracker/management/commands/populate_db.py`
-- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
+- Se Mona encontrou um erro, basta fazer uma correção e enviar suas mudanças novamente. Mona verificará seu trabalho quantas vezes forem necessárias.
 
 </details>
