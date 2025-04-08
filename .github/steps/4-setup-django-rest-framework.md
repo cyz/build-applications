@@ -1,70 +1,70 @@
-## Step 4: Setup Django REST Framework, start the server, and test the API
+## Passo 4: Configurar o Django REST Framework, iniciar o servidor e testar a API
 
-In this step, we will accomplish the following:
+Neste passo, vamos realizar as seguintes tarefas:
 
-- Setup the Django REST Framework.
-- Start the server.
-- Test the API using curl.
+- Configurar o Django REST Framework.
+- Iniciar o servidor.
+- Testar a API usando curl.
 
-1. Open all files in the `docs` folder and keep this file open in the editor throughout this exercise.
-    1.  agent mode uses `mona-high-school-fitness-tracker.md` and `octofit_story.md` as a reference to create the application
-2. Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
+1. Abra todos os arquivos na pasta `docs` e mantenha este arquivo aberto no editor durante todo o exercício.
+    1. O modo agente usa `mona-high-school-fitness-tracker.md` e `octofit_story.md` como referência para criar a aplicação.
+2. Copie e cole os seguintes prompts no chat do GitHub Copilot e selecione "Agente" em vez de "Perguntar" ou "Editar" no menu suspenso onde você está inserindo o prompt.
 
-> 🪧 **Note:** 
-- Do not change the model from GPT-4o this will be an optional activity at the end of the course.
-- Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
-- Wait a moment for the Copilot to respond and press the continue button to execute commands presented by Copilot agent mode.
-- Keep files created and updated by Copilot agent mode until it is finished.
-- Agent mode has the ability to evaluate your code base and execute commands and add/refactor/delete parts of your code base and automatically self heal if it or you makes a mistake in the process.
+> 🪧 **Nota:** 
+- Não altere o modelo de GPT-4, isso será uma atividade opcional no final do curso.
+- Lembre-se de que o modo agente do Copilot é conversacional, então ele pode fazer perguntas e você pode fazer perguntas também.
+- Aguarde um momento para o Copilot responder e pressione o botão continuar para executar os comandos apresentados pelo modo agente do Copilot.
+- Mantenha os arquivos criados e atualizados pelo modo agente do Copilot até que ele termine.
+- O modo agente tem a capacidade de avaliar sua base de código, executar comandos e adicionar/refatorar/excluir partes do seu código e se auto corrigir automaticamente se ele ou você cometer um erro no processo.
 
-### :keyboard: Activity: Setup Django REST Framework, restart the server, and test the API
+### :keyboard: Atividade: Configurar o Django REST Framework, reiniciar o servidor e testar a API
 
-> 🪧 **Note:** 
-- Make sure to replace [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] with your codespace name.
+> 🪧 **Nota:** 
+- Certifique-se de substituir [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] pelo nome do seu codespace.
   - ex. redesigned-spork-g6pj46rr9hpp6x
-- You can get the codespace name by running the following command in the terminal: `echo $CODESPACE_NAME`.
+- Você pode obter o nome do codespace executando o seguinte comando no terminal: `echo $CODESPACE_NAME`.
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
->Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for Mergington's high school's app. Let's setup codespace for the URL, start the server via VS Code launch.json, and test the API.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de Mergington. Vamos configurar o codespace para a URL, iniciar o servidor via VS Code launch.json e testar a API.
 > 
-> 1. Activate the Python virtual environment.
-> 2. Update #file:octofit-tracker/backend/octofit_tracker/views.py to replace the return for the REST API URL endpoints with the codespace URL https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev for Django and avoid certificate HTTPS issues.
-> 3. Make sure the Django backend works on [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev and localhost:8000.
-> 4. Test the API endpoints using curl command.
-> 5. Allow host access to codespace URL and localhost:8000.
+> 1. Ative o ambiente virtual Python.
+> 2. Atualize #file:octofit-tracker/backend/octofit_tracker/views.py para substituir o retorno dos endpoints da URL da API REST pela URL do codespace https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev para Django e evitar problemas de certificado HTTPS.
+> 3. Certifique-se de que o backend Django funciona em [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev e localhost:8000.
+> 4. Teste os endpoints da API usando o comando curl.
+> 5. Permita o acesso do host à URL do codespace e localhost:8000.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-> ❕ **Important:** Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel**. Follow the next activity instead.
+> ❕ **Importante:** Não inicie o aplicativo Python Django da maneira que o modo agente do GitHub Copilot sugere, clique em **cancelar**. Siga a próxima atividade em vez disso.
 
-### :keyboard: Activity: Start the Python Django app and check the output
-Now, let's actually try running the Django application! In the left sidebar, select the `Run and Debug` tab and then press the **Start Debugging** icon.
+### :keyboard: Atividade: Iniciar o aplicativo Python Django e verificar a saída
+Agora, vamos realmente tentar executar a aplicação Django! Na barra lateral esquerda, selecione a aba `Executar e Depurar` e pressione o ícone **Iniciar Depuração**.
 
 <img src="https://github.com/user-attachments/assets/baef4dfe-0751-45cb-9e16-8ff26ba9ff58" width=30% height=30%>
 
-> ❕ **Important:**
-- Make sure to replace [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] with your codespace name.
+> ❕ **Importante:**
+- Certifique-se de substituir [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] pelo nome do seu codespace.
 - ex. redesigned-spork-g6pj46rr9hpp6x
-- You can get the codespace name by running the following command in the terminal: `echo $CODESPACE_NAME`.
+- Você pode obter o nome do codespace executando o seguinte comando no terminal: `echo $CODESPACE_NAME`.
 
-1. Now that we have updated our Django product to include our codespace name for the URL endpoint,
-   let's check our changes in to our `build-octofit-app` branch.
+1. Agora que atualizamos nosso produto Django para incluir o nome do nosso codespace para o endpoint da URL,
+   vamos verificar nossas mudanças na branch `build-octofit-app`.
 
-1. With our new changes complete, please **commit** and **push** the changes to GitHub.
+1. Com nossas novas mudanças concluídas, por favor, **commit** e **push** as mudanças para o GitHub.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson so we can keep working!
+1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição para continuarmos trabalhando!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Tendo problemas? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Se você não receber feedback, aqui estão algumas coisas para verificar:
 
-- Make sure your commit changes were made for the following files to the branch `build-octofit-app` and pushed/synchronized to GitHub:
+- Certifique-se de que suas mudanças de commit foram feitas para os seguintes arquivos na branch `build-octofit-app` e enviadas/sincronizadas para o GitHub:
   - `octofit-tracker/backend/octofit_tracker/settings.py`
   - `octofit-tracker/backend/octofit_tracker/views.py`
-- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
+- Se Mona encontrou um erro, basta fazer uma correção e enviar suas mudanças novamente. Mona verificará seu trabalho quantas vezes forem necessárias.
 
 </details>
