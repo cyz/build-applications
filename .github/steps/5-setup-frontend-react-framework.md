@@ -1,9 +1,9 @@
-## Step 5: Setup the frontend React framework, update the components, and start OctoFit Tracker app
+## Passo 5: Configurar o framework React no frontend, atualizar os componentes e iniciar o aplicativo OctoFit Tracker
 
-In this step, we will accomplish the following:
+Neste passo, vamos realizar as seguintes tarefas:
 
-- Setup the octofit-tracker frontend React framework.
-- Update the following components to include the React framework:
+- Configurar o framework React no frontend do octofit-tracker.
+- Atualizar os seguintes componentes para incluir o framework React:
   - src/App.js
   - src/index.js
   - src/components/Activities.js
@@ -11,50 +11,50 @@ In this step, we will accomplish the following:
   - src/components/Teams.js
   - src/components/Users.js
   - src/components/Workouts.js
-- Start the React app and check the output.
+- Iniciar o aplicativo React e verificar a saída.
 
-1. Open all files in the `docs` folder and keep this file open in the editor throughout this exercise.
-    1.  agent mode uses `mona-high-school-fitness-tracker.md` and `octofit_story.md` as a reference to create the application
-2. Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
+1. Abra todos os arquivos na pasta `docs` e mantenha este arquivo aberto no editor durante todo o exercício.
+    1. O modo agente usa `mona-high-school-fitness-tracker.md` e `octofit_story.md` como referência para criar a aplicação.
+2. Copie e cole os seguintes prompts no chat do GitHub Copilot e selecione "Agente" em vez de "Perguntar" ou "Editar" no menu suspenso onde você está inserindo o prompt.
 
-> 🪧 **Note:** 
-- Do not change the model from GPT-4o this will be an optional activity at the end of the course.
-- Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
-- Wait a moment for the Copilot to respond and press the continue button to execute commands presented by Copilot agent mode.
-- Keep files created and updated by Copilot agent mode until it is finished.
-- Agent mode has the ability to evaluate your code base and execute commands and add/refactor/delete parts of your code base and automatically self heal if it or you makes a mistake in the process.
+> 🪧 **Nota:** 
+- Não altere o modelo de GPT-4, isso será uma atividade opcional no final do curso.
+- Lembre-se de que o modo agente do Copilot é conversacional, então ele pode fazer perguntas e você pode fazer perguntas também.
+- Aguarde um momento para o Copilot responder e pressione o botão continuar para executar os comandos apresentados pelo modo agente do Copilot.
+- Mantenha os arquivos criados e atualizados pelo modo agente do Copilot até que ele termine.
+- O modo agente tem a capacidade de avaliar sua base de código, executar comandos e adicionar/refatorar/excluir partes do seu código e se auto corrigir automaticamente se ele ou você cometer um erro no processo.
 
-### :keyboard: Activity: Install the octofit-tracker frontend React framework
+### :keyboard: Atividade: Instalar o framework React no frontend do octofit-tracker
 
-> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+> https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. Let's setup codespace for the octofit-tracker frontend React framework.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington. Vamos configurar o codespace para o framework React no frontend do octofit-tracker.
 >
-> 1. Make the octofit-tracker/frontend directory.
-> 2. Create the react app in the octofit-tracker/frontend directory.
-> 3. Install stable versions of React framework and modules based on docs/mona-high-school-fitness-tracker.md.
-> 4. Install stable bootstrap in the octofit-tracker/frontend directory.
-> 5. Import bootstrap css in the src/index.js file.
-> 6. Install the stable react-router-dom in the octofit-tracker/frontend directory.
-> 7. Don't change .gitignore file
+> 1. Crie o diretório octofit-tracker/frontend.
+> 2. Crie o aplicativo react no diretório octofit-tracker/frontend.
+> 3. Instale versões estáveis do framework React e módulos com base no docs/mona-high-school-fitness-tracker.md.
+> 4. Instale o bootstrap estável no diretório octofit-tracker/frontend.
+> 5. Importe o css do bootstrap no arquivo src/index.js.
+> 6. Instale o react-router-dom estável no diretório octofit-tracker/frontend.
+> 7. Não altere o arquivo .gitignore.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-### :keyboard: Activity: Update the octofit-tracker frontend React components
+### :keyboard: Atividade: Atualizar os componentes React do frontend do octofit-tracker
 
-> 🪧 **Note:** 
-- Make sure to replace [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] with your codespace name.
+> 🪧 **Nota:** 
+- Certifique-se de substituir [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] pelo nome do seu codespace.
   - ex. redesigned-spork-g6pj46rr9hpp6x
-- You can get the codespace name by running the following command in the terminal: `echo $CODESPACE_NAME`.
+- Você pode obter o nome do codespace executando o seguinte comando no terminal: `echo $CODESPACE_NAME`.
 
-> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+> https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. Let's update the octofit-tracker frontend React components.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington. Vamos atualizar os componentes React do frontend do octofit-tracker.
 >
-> - Update the following components to include the React framework to point to the backend API:
+> - Atualize os seguintes componentes para incluir o framework React e apontar para a API do backend:
 >   - src/App.js
 >   - src/index.js
 >   - src/components/Activities.js
@@ -62,90 +62,90 @@ In this step, we will accomplish the following:
 >   - src/components/Teams.js
 >   - src/components/Users.js
 >   - src/components/Workouts.js
-> - In each component replace the fetch url with the codespace url https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev/api/<component> for the Django rest framework backend.
-> - Make sure to use the correct port and protocol http or https.
-> - Update src/App.js to include the main navigation for all components.
-> - Make sure react-router-dom is used for the navigation menu.
-> - The react app should show the navigation menu and the components.
+> - Em cada componente, substitua a URL de fetch pela URL do codespace https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev/api/<component> para o backend do Django rest framework.
+> - Certifique-se de usar a porta e o protocolo corretos, http ou https.
+> - Atualize src/App.js para incluir a navegação principal para todos os componentes.
+> - Certifique-se de que o react-router-dom seja usado para o menu de navegação.
+> - O aplicativo react deve mostrar o menu de navegação e os componentes.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 > ```
 
-> ❕ **Important:**
-- Make sure to replace [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] with your codespace name.
+> ❕ **Importante:**
+- Certifique-se de substituir [REPLACE-THIS-WITH-YOUR-CODESPACE-NAME] pelo nome do seu codespace.
   - ex. redesigned-spork-g6pj46rr9hpp6x
-- You can get the codespace name by running the following command in the terminal: `echo $CODESPACE_NAME`.
+- Você pode obter o nome do codespace executando o seguinte comando no terminal: `echo $CODESPACE_NAME`.
 
-### :keyboard: Activity: Start the react app and check the output
+### :keyboard: Atividade: Iniciar o aplicativo react e verificar a saída
 
-Now, let's actually try running the react application! In the left sidebar, select the `Run and Debug` tab and then press the **Start Debugging** icon.
+Agora, vamos realmente tentar executar a aplicação react! Na barra lateral esquerda, selecione a aba `Executar e Depurar` e pressione o ícone **Iniciar Depuração**.
 
 <img src="https://github.com/user-attachments/assets/8ab08e4e-539a-4ca9-8270-be4b1f0df176"  width=30% height=30%>
 
-### :keyboard: Activity: Let's add some formatting, structuring, and styling to the octofit tracker app
+### :keyboard: Atividade: Vamos adicionar formatação, estruturação e estilo ao aplicativo octofit tracker
 
-> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+> https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. Let's style this like App.css and make it look nice.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington. Vamos estilizar isso como App.css e deixá-lo bonito.
 >
-> - Let's make the App.js and all components javascript files in the app are consistent with the following:
->   - Use bootstrap tables for the data in all javascript components.
->   - Use bootstrap buttons for the buttons.
->   - Use bootstrap headings for the headings.
->   - Use bootstrap links for the links.
->   - Use bootstrap navigation for the navigation menu.
->   - Use bootstrap forms for the forms.
->   - Use bootstrap cards for the cards.
->   - Use bootstrap modals for the modals.
+> - Vamos fazer com que o App.js e todos os arquivos javascript dos componentes no aplicativo sejam consistentes com o seguinte:
+>   - Use tabelas bootstrap para os dados em todos os componentes javascript.
+>   - Use botões bootstrap para os botões.
+>   - Use cabeçalhos bootstrap para os cabeçalhos.
+>   - Use links bootstrap para os links.
+>   - Use navegação bootstrap para o menu de navegação.
+>   - Use formulários bootstrap para os formulários.
+>   - Use cartões bootstrap para os cartões.
+>   - Use modais bootstrap para os modais.
 >
-> Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-### :keyboard: Optional Activity: Let's make the octofit tracker app look nice, pretty, and add some color
+### :keyboard: Atividade Opcional: Vamos deixar o aplicativo octofit tracker bonito, agradável e adicionar um pouco de cor
 
-> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+> https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. Let's style this like App.css and make it look nice.
+> Com base no exemplo do aplicativo monafit tracker no arquivo docs/mona-high-school-fitness-tracker.md e use octofit como o nome do aplicativo das escolas de mergington. Vamos estilizar isso como App.css e deixá-lo bonito.
 > 
-> -  Edit the App.css file to do the following:
->   - Add some color to the background.
->   - Add some color to the text.
->   - Add some color to the tables.
->   - Add some color to the buttons.
->   - Add some color to the headings.
->   - Add some color to the links.
->   - Add some color to the navigation menu.
-> - Add the octofitapp-small logo justified to the left to the app and make it look nice.
-> - Add a favicon to the app and make it look nice.
+> - Edite o arquivo App.css para fazer o seguinte:
+>   - Adicione um pouco de cor ao fundo.
+>   - Adicione um pouco de cor ao texto.
+>   - Adicione um pouco de cor às tabelas.
+>   - Adicione um pouco de cor aos botões.
+>   - Adicione um pouco de cor aos cabeçalhos.
+>   - Adicione um pouco de cor aos links.
+>   - Adicione um pouco de cor ao menu de navegação.
+> - Adicione o logotipo octofitapp-small justificado à esquerda no aplicativo e deixe-o bonito.
+> - Adicione um favicon ao aplicativo e deixe-o bonito.
 >
->Don't proceed with the next activity until all of these steps are completed.
+> Não prossiga para a próxima atividade até que todos esses passos sejam concluídos.
 >```
 
-### :keyboard: Optional Activity: Iterate on the appearance and try different models
+### :keyboard: Atividade Opcional: Iterar na aparência e tentar diferentes modelos
 
-> 🧪 **Try this:**
-- Try creating your own prompts to change the application appearance, add features, and try different models.
-- Once you are happy with the application you can commit the changes and push them to your branch `build-octofit-app`.
+> 🧪 **Experimente isto:**
+- Tente criar seus próprios prompts para alterar a aparência do aplicativo, adicionar recursos e experimentar diferentes modelos.
+- Quando estiver satisfeito com o aplicativo, você pode fazer commit das alterações e enviá-las para sua branch `build-octofit-app`.
 
-1. Now that we have created the REACT frontend for all application components let's check our changes in to our `build-octofit-app` branch.
+1. Agora que criamos o frontend REACT para todos os componentes da aplicação, vamos verificar nossas mudanças na branch `build-octofit-app`.
 
-1. With our new changes complete, please **commit** and **push** the changes to GitHub.
+1. Com nossas novas mudanças concluídas, por favor, **commit** e **push** as mudanças para o GitHub.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson so we can keep working!
+1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição para continuarmos trabalhando!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Tendo problemas? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Se você não receber feedback, aqui estão algumas coisas para verificar:
 
-- Make sure your commit changes were made for the following files to the branch `build-octofit-app` and pushed/synchronized to GitHub:
-  - `octofit-tracker/frontend/src/components/Activities.js` and it contains `-8000.app.github.dev/api/activities/`
-  - `octofit-tracker/frontend/src/components/Leaderboard.js` and it contains `-8000.app.github.dev/api/leaderboard/`
-  - `octofit-tracker/frontend/src/components/Teams.js` and it contains `-8000.app.github.dev/api/teams/`
-  - `octofit-tracker/frontend/src/components/Users.js` and it contains `-8000.app.github.dev/api/users/`
-  - `octofit-tracker/frontend/src/components/Workouts.js` and it contains `-8000.app.github.dev/api/workouts/`
-- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
+- Certifique-se de que suas mudanças de commit foram feitas para os seguintes arquivos na branch `build-octofit-app` e enviadas/sincronizadas para o GitHub:
+  - `octofit-tracker/frontend/src/components/Activities.js` e ele contém `-8000.app.github.dev/api/activities/`
+  - `octofit-tracker/frontend/src/components/Leaderboard.js` e ele contém `-8000.app.github.dev/api/leaderboard/`
+  - `octofit-tracker/frontend/src/components/Teams.js` e ele contém `-8000.app.github.dev/api/teams/`
+  - `octofit-tracker/frontend/src/components/Users.js` e ele contém `-8000.app.github.dev/api/users/`
+  - `octofit-tracker/frontend/src/components/Workouts.js` e ele contém `-8000.app.github.dev/api/workouts/`
+- Se Mona encontrou um erro, basta fazer uma correção e enviar suas mudanças novamente. Mona verificará seu trabalho quantas vezes forem necessárias.
 
 </details>
