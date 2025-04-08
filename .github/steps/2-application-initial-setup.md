@@ -37,15 +37,16 @@ In this step, we will accomplish the following:
 
 > ❕ **Important:** Once the above activity installs all the required packages, proceed to the next activity.
 
-### :keyboard: Activity: Let's install MongoDB
+### :keyboard: Activity: Let's start and verify mongoDB is running
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. > Let's install MongoDB.
+> Based on the example monafit tracker app in the docs/mona-high-school-fitness-tracker.md file and use octofit as the name for mergington's high schools app. > Let's start and verify mongoDB is running.
 >
-> 1. Install MongoDB and make sure the command is complete.
->
+> 1. Start the mongoDB service.
+> 2. Verify the mongoDB service running.
+> 
 > Don't proceed with the next activity until all of these steps are completed.
 >```
 
